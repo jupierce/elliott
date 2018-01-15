@@ -57,7 +57,7 @@ def flag_bugs(ctx, bug_list):
         click.echo("Flagging Bug #{0} with aos-{1}".format(bug, release))
         call(['bugzilla', 'modify', '--flag', 'aos-{0}+'.format(release), bug])
 
-@cli.command("flag_bugs", help="Refresh a list of bugs in errata tool")
+@cli.command("refresh_bugs", help="Refresh a list of bugs in errata tool")
 @click.pass_context
 def refresh_bugs(ctx, bug_list):
   payload = repr(bug_list)
